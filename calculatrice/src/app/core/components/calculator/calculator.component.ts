@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent {
   displayValue: string = '';
+  calculationHistory: string[] = [];
   previousOperation: string = '';
 
   addNumber(num: number) {
@@ -20,6 +21,8 @@ export class CalculatorComponent {
   calculate() {
     try {
       const result = eval(this.displayValue).toString();
+
+      this.calculationHistory.push(this.displayValue + '=' + result);
       this.previousOperation = this.displayValue;
       this.displayValue = result;
     
@@ -40,7 +43,6 @@ export class CalculatorComponent {
     }
  
   }
-  
   
   
 }

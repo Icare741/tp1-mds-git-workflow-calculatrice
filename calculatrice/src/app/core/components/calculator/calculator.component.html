@@ -31,5 +31,10 @@
         </div>
 
     </div>
-
+    <div class="mt-4">
+        <h3>Historique :</h3>
+        <ul>
+          <li *ngFor="let calculation of calculationHistory">{{ calculation }}</li>
+        </ul>
+      </div>
 </div>
