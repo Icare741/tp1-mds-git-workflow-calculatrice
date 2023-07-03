@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CalculatorComponent } from './components/calculator/calculator.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -10,6 +12,7 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
   ],
   imports: [
     CommonModule,
+    FormsModule
 
   ],
 exports: [
