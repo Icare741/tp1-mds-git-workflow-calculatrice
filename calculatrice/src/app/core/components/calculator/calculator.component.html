@@ -1,0 +1,42 @@
+<div class="bg-gray-200 p-4 rounded-md mx-20">
+    <div class="w-3/4 pr-4">
+        <input class="w-full bg-white text-gray-800 mb-4 p-2 rounded-md text-left" type="text"
+            [(ngModel)]="displayValue" (keydown.enter)="calculate()">
+    </div>
+    <div class="mt-4">
+        <div class="grid grid-cols-4 gap-2">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md" (click)="addNumber(7)">7</button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md" (click)="addNumber(8)">8</button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md" (click)="addNumber(9)">9</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 rounded-md" (click)="addOperator('/')">/</button>
+
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md" (click)="addNumber(4)">4</button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md" (click)="addNumber(5)">5</button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md" (click)="addNumber(6)">6</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 rounded-md" (click)="addOperator('*')">*</button>
+
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md" (click)="addNumber(1)">1</button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md" (click)="addNumber(2)">2</button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md" (click)="addNumber(3)">3</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 rounded-md" (click)="addOperator('-')">-</button>
+
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md col-span-2"
+                (click)="addNumber(0)">0</button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md"
+                (click)="addOperator('.')">.</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 rounded-md" (click)="calculate()">=</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 rounded-md" (click)="addOperator('+')">+</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md" (click)="clear()">C</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md"
+                (click)="clearError()">CE</button>
+        </div>
+
+    </div>
+    <div class="mt-4">
+        <h3>Historique :</h3>
+        <ul>
+            <li *ngFor="let calculation of calculationHistory">{{ calculation }}</li>
+        </ul>
+    </div>
+    <button class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md" (click)="exportToCSV()">Export CSV</button>
+</div>
