@@ -27,14 +27,16 @@
             <button class="bg-red-500 hover:bg-red-600 text-white py-2 rounded-md" (click)="calculate()">=</button>
             <button class="bg-red-500 hover:bg-red-600 text-white py-2 rounded-md" (click)="addOperator('+')">+</button>
             <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md" (click)="clear()">C</button>
-            <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md"(click)="clearError()">CE</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md"
+                (click)="clearError()">CE</button>
         </div>
 
     </div>
     <div class="mt-4">
         <h3>Historique :</h3>
         <ul>
-          <li *ngFor="let calculation of calculationHistory">{{ calculation }}</li>
+            <li *ngFor="let calculation of calculationHistory">{{ calculation }}</li>
         </ul>
-      </div>
+    </div>
+    <button class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md" (click)="exportToCSV()">Export CSV</button>
 </div>
