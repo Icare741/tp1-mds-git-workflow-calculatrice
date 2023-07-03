@@ -7,30 +7,40 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent {
   displayValue: string = '';
-
+  previousOperation: string = '';
 
   addNumber(num: number) {
-    
-    
+    this.displayValue += num.toString();
   }
 
   addOperator(operator: string) {
-   
-    
+    this.displayValue += operator;
   }
 
   calculate() {
+    try {
+      const result = eval(this.displayValue).toString();
+      this.previousOperation = this.displayValue;
+      this.displayValue = result;
     
+      
+    } catch (error) {
+      this.displayValue = 'Error';
+    }
   }
 
   clear() {
-    
+    this.displayValue = '';
+    this.previousOperation = '';
   }
 
   clearError() {
-   
+    if (this.previousOperation !== ''){
+      this.displayValue = this.previousOperation;
+    }
  
   }
+  
   
   
 }
