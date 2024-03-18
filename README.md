@@ -1,7 +1,6 @@
 # Calculatrice Web
 
-Bienvenue dans l'application Calculatrice Web ! Cette application vous permet de réaliser des opérations de base telles que l'addition, la soustraction, la multiplication et la division.
-
+Bienvenue dans l'application du projet EDA (anciennement calculatrice) Web !
 ## Installation
 
 1. Assurez-vous d'avoir Node.js installé sur votre machine.
@@ -11,16 +10,7 @@ Bienvenue dans l'application Calculatrice Web ! Cette application vous permet de
 npm install
 ng serve
 
-5. Ouvrez votre navigateur et accédez à l'URL suivante : `http://localhost:4200`. Vous devriez voir l'application Calculatrice Web en cours d'exécution.
-
-## Utilisation
-
-- Pour effectuer une opération, vous pouvez utiliser les boutons numériques pour saisir les chiffres et les boutons d'opérateurs pour sélectionner l'opération. 
-- Vous pouvez également utiliser le clavier de votre ordinateur pour entrer les chiffres et les opérateurs dans la calculatrice.
-- Une fois que vous avez entré votre opération, appuyez sur le bouton "=" ou appuyez sur la touche "Entrée" pour obtenir le résultat.
-- Pour effacer l'opération en cours, utilisez le bouton "C" pour effacer complètement l'entrée ou utilisez le bouton "CE" pour revenir à l'opération précédente.
-- L'historique des calculs effectués pendant la session est affiché en bas de la calculatrice.
-- Vous pouvez exporter l'historique des calculs au format CSV en utilisant le bouton "Export CSV".
+5. Ouvrez votre navigateur et accédez à l'URL suivante : `http://localhost:4200`. Vous devriez voir l'application Web en cours d'exécution.
 
 ## Technologies utilisées
 
