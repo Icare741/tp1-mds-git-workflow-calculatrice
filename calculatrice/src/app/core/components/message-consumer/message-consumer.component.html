@@ -1,0 +1,25 @@
+<!-- message-consumer.component.html -->
+<div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+    <div class="mb-4">
+        <label for="newChannel" class="block text-sm font-medium text-gray-700">Add Channel:</label>
+        <input type="text" id="newChannel" [(ngModel)]="newChannel" class="mt-1 p-2 border rounded-md w-full">
+        <button (click)="addChannel()" class="px-4 py-2 bg-blue-500 text-white mt-2">
+            Add
+        </button>
+    </div>
+    <div class="grid grid-cols-3 gap-4">
+      <div *ngFor="let channel of channels" class="border p-4">
+        <h2 class="text-xl font-bold mb-2">{{ channel }}</h2>
+        <button (click)="toggleSubscription(channel)" class="px-4 py-2 bg-blue-500 text-white mb-2">
+          {{ isSubscribed(channel) ? 'Unsubscribe' : 'Subscribe' }}
+        </button>
+        <ul class="list-disc pl-4">
+          <li *ngFor="let message of messages[channel]">
+            <strong>{{ message.author }}</strong>: {{ message.content }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CalculatorComponent } from './components/calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
+import { MessageConsumerComponent } from './components/message-consumer/message-consumer.component';
+import { MessageProducerComponent } from './components/message-producer/message-producer.component';
+
 
 
 
 
 @NgModule({
   declarations: [
-    CalculatorComponent
+    MessageConsumerComponent,
+    MessageProducerComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +19,8 @@ import { FormsModule } from '@angular/forms';
 
   ],
 exports: [
-  CalculatorComponent,
+  MessageConsumerComponent,
+  MessageProducerComponent
 ],
 })
 export class CoreModule { }

@@ -1,0 +1,18 @@
+<!-- message-producer.component.html -->
+
+<div class="flex flex-col items-center justify-center">
+    <div class="mb-4">
+      <label for="author" class="block mb-2">Author:</label>
+      <input type="text" id="author" [(ngModel)]="author" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500">
+    </div>
+    <div class="mb-4">
+      <label for="content" class="block mb-2">Content:</label>
+      <input type="text" id="content" [(ngModel)]="content" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500">
+    </div>
+    <div class="mb-4">
+      <label for="channel" class="block mb-2">Channel:</label>
+      <input type="text" id="channel" [(ngModel)]="channel" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500">
+    </div>
+    <button (click)="sendMessage(author, content, channel)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send Message</button>
+  </div>
+  
